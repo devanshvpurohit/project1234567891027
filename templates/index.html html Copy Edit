@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crappy Sign Translator</title>
+</head>
+<body>
+    <h1>Sign Language Translator</h1>
+    <form method="POST" action="/translate">
+        <input type="text" name="text" placeholder="Enter text">
+        <button type="submit">Translate</button>
+    </form>
+
+    {% if video_url %}
+    <h2>Translation Video</h2>
+    <video width="320" controls>
+        <source src="{{ video_url }}" type="video/mp4">
+    </video>
+    {% endif %}
+
+    <h2>Random GitHub Code Snippet:</h2>
+    <pre>{{ code_snippet }}</pre>
+</body>
+</html>
+
